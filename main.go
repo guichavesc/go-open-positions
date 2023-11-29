@@ -1,13 +1,10 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/guichavesc/go-open-positions/router"
+)
 
 func main() {
-	r := gin.Default()
-	r.GET("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "Hello, World!",
-		})
-	})
-	r.Run() // listen and serve on
+	// Initialize router
+	router.Initialize()
 }
